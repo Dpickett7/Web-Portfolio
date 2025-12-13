@@ -336,3 +336,74 @@ footer p {
     padding: 26px 0 44px;
   }
 }
+/* =========================
+   Visual Exploration Section
+   ========================= */
+
+.visual-section {
+  margin-top: 56px;
+  padding: 28px;
+  border-radius: 18px;
+  background-color: rgba(2, 6, 23, 0.45);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.visual-section h2 {
+  font-size: 24px;
+}
+
+.visual-section p {
+  max-width: 60ch;
+  color: #cbd5e1;
+}
+
+.visual-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background-color: rgba(56, 189, 248, 0.12);
+}
+
+.visual-link:hover {
+  background-color: rgba(56, 189, 248, 0.2);
+  text-decoration: none;
+}
+/* =========================
+   Visual Exploration Page
+   ========================= */
+
+.visual-page {
+  background-color: #0b1220;
+}
+
+.visual-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.visual-page p {
+  max-width: 65ch;
+  color: #cbd5e1;
+}
+
+.visual-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.visual-grid img {
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+@media (max-width: 780px) {
+  .visual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
