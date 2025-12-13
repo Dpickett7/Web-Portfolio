@@ -1,0 +1,338 @@
+/* =========================
+   Global Reset + Base
+   ========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #e5e7eb;             /* Font color #1 (light text) */
+  line-height: 1.6;
+}
+
+/* If you used Space Grotesk in your index.html, headings will pick it up here */
+h1, h2 {
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  color: #ffffff;             /* Font color #2 (pure white headings) */
+  letter-spacing: 0.2px;
+}
+
+main {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #38bdf8;             /* Accent link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Paragraph spacing */
+p {
+  margin-top: 12px;
+}
+
+/* Lists spacing */
+ul, ol {
+  margin-top: 12px;
+  padding-left: 22px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+/* =========================
+   Page Backgrounds (Rubric!)
+   Each page gets its own background color
+   ========================= */
+
+.home-page {
+  background-color: #0b1220;
+}
+
+.about-page {
+  background-color: #0f172a;
+}
+
+.portfolio-page {
+  background-color: #0b1324;
+}
+
+.resume-page {
+  background-color: #0e1626;
+}
+
+.contact-page {
+  background-color: #0c1426;
+}
+
+/* =========================
+   Header + Navigation
+   ========================= */
+
+header {
+  width: 100%;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background-color: rgba(2, 6, 23, 0.65);
+  backdrop-filter: blur(8px);
+}
+
+.nav {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-weight: 700;
+  color: #ffffff;
+  margin-right: auto;
+  letter-spacing: 0.4px;
+}
+
+/* Nav links */
+.nav a {
+  color: #cbd5e1;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.nav a:hover {
+  background-color: rgba(148, 163, 184, 0.12);
+  text-decoration: none;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  width: 100%;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  background-color: rgba(2, 6, 23, 0.55);
+}
+
+footer p {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 18px 0;
+  color: #94a3b8; /* Another font color variation */
+}
+
+/* =========================
+   Home Page Styling
+   ========================= */
+
+.home-page main {
+  padding-top: 56px;
+}
+
+.home-page h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+}
+
+.home-page p {
+  max-width: 60ch;
+  color: #cbd5e1;
+}
+
+.home-page main a {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background-color: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.home-page main a:hover {
+  text-decoration: none;
+  background-color: rgba(56, 189, 248, 0.22);
+}
+
+/* =========================
+   About Page
+   ========================= */
+
+.about-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-page h2 {
+  font-size: 22px;
+  margin-top: 22px;
+}
+
+.about-page p, 
+.about-page li {
+  color: #cbd5e1;
+}
+
+.about-page img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 24px auto;
+  display: block;
+  border-radius: 16px;
+}
+
+
+/* =========================
+   Portfolio Grid + Cards
+   ========================= */
+
+.portfolio-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.portfolio-page p {
+  color: #cbd5e1;
+}
+
+/* Grid container */
+.portfolio-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Card */
+.project-card {
+  background-color: rgba(2, 6, 23, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.20);
+  border-radius: 18px;
+  padding: 16px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+.project-card img {
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  margin-bottom: 12px;
+}
+
+.project-card h2 {
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.project-card p {
+  color: #cbd5e1;
+}
+
+/* Card link button style */
+.project-card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background-color: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.project-card a:hover {
+  text-decoration: none;
+  background-color: rgba(56, 189, 248, 0.20);
+}
+
+/* =========================
+   Resume Page
+   ========================= */
+
+.resume-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.resume-page h2 {
+  font-size: 22px;
+  margin-top: 22px;
+}
+
+.resume-page p,
+.resume-page li {
+  color: #cbd5e1;
+}
+
+/* Give the list a subtle card look */
+.resume-page ol {
+  background-color: rgba(2, 6, 23, 0.45);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 14px;
+  padding: 14px 18px 14px 34px;
+}
+
+/* =========================
+   Contact Page
+   ========================= */
+
+.contact-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact-page p {
+  color: #cbd5e1;
+}
+
+.contact-page main a {
+  font-weight: 600;
+}
+
+/* =========================
+   Responsive (Mobile)
+   ========================= */
+
+@media (max-width: 780px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 26px 0 44px;
+  }
+}
