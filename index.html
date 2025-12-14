@@ -20,19 +20,47 @@
 </header>
 
 <main>
-  <h1>UX Designer & Creative Technologist</h1>
-  <p>I design digital experiences that prioritize clarity, usability, and creativity. My work blends UX design 
-    principles with front-end development to create interfaces that feel intuitive, engaging, and easy to navigate.</p>
+  <!-- Welcome Section -->
+<section class="welcome-section">
+  <p class="welcome-text" id="welcomeText">Welcome To My Portfolio</p>
 
-    <p>Through hands-on projects in web design, interaction design, and branding, I focus on building user-centered 
-        experiences that balance visual design with functionality. I enjoy turning ideas into thoughtful digital 
-        solutions that are both practical and visually strong. I’m especially interested in how design decisions 
-        impact user behavior and overall experience. </p>
-  <p><a href="portfolio.html">View My Work</a></p>
+  <span class="scroll-cue">↓</span>
+</section>
+
+<!-- Identity Section -->
+<section class="hero-section">
+  <h1>UX Designer & Creative Technologist</h1>
+  <p>
+    I design and build digital experiences that prioritize clarity, usability,
+    and visual storytelling. My work combines UX design principles with front-end
+    development to create intuitive, engaging interfaces.
+  </p>
+  <p>
+    Through projects in web design, interaction design, and branding, I focus on
+    creating user-centered experiences that feel intentional and easy to navigate.
+  </p>
+
+  <a href="portfolio.html" class="hero-cta">View My Work</a>
+</section>
+
 </main>
 
 <footer>
   <p>© 2025 David Pickett</p>
 </footer>
+<script>
+  const welcomeText = document.getElementById("welcomeText");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const fadePoint = 200; // how quickly it fades
+
+    let opacity = 1 - scrollY / fadePoint;
+    opacity = Math.max(opacity, 0.3); // never fully disappears
+
+    welcomeText.style.opacity = opacity;
+  });
+</script>
+
 </body>
 </html>
